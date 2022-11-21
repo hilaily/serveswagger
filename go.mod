@@ -1,4 +1,4 @@
-module serveswagger
+module github.com/hilaily/serveswagger
 
 go 1.19
 
