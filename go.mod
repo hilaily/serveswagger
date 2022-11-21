@@ -4,6 +4,7 @@ go 1.19
 
 require (
 	github.com/hilaily/kit v0.5.31
+	github.com/jessevdk/go-flags v1.5.0
 	github.com/pkg/browser v0.0.0-20210911075715-681adbf594b8
 )
 
