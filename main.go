@@ -57,7 +57,7 @@ func checkFile(file string) (string, error) {
 		}
 	}
 	if file == "" {
-		return "", fmt.Errorf("you should use it like 'serveswagger /opt/swagger.json'")
+		return "", fmt.Errorf("you should use it like 'serveswagger -f /opt/swagger.json'")
 	}
 	return file, nil
 }
