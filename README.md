@@ -2,6 +2,12 @@
 
 Render a swagger file in local with http server.
 
+### Install
+
+```bash
+go install github.com/hilaily/serveswagger@latest
+```
+
 ### Usage
 
 ```shell
