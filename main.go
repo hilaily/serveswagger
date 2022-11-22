@@ -28,12 +28,15 @@ func main() {
 	op := &ops{}
 	_, err := flags.ParseArgs(op, os.Args)
 	if err != nil {
+		log.Println(err.Error())
 		return
 	}
 	file, err := checkFile(op.File)
 	if err != nil {
 		log.Println(err.Error())
+		return
 	}
+	log.Printf("serve file: %s, port: %d\n", file, op.Port)
 	port = fmt.Sprintf("%d", op.Port)
 	baseURL = baseURL + port
 	render(file)
@@ -48,7 +51,7 @@ func checkFile(file string) (string, error) {
 	if file != "" {
 		return file, nil
 	}
-	for _, v := range []string{"./swagger.json", "./swagger.yaml"} {
+	for _, v := range []string{"./swagger.json", "./swagger.yaml", "./docs/swagger.json", "./docs/swagger.yaml"} {
 		if pathx.IsExist(v) {
 			return v, nil
 		}
